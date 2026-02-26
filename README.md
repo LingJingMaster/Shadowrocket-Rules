@@ -12,7 +12,8 @@ https://raw.githubusercontent.com/LingJingMaster/Shadowrocket-Rules/refs/heads/m
 5. 连通性测试，选择可用节点连接
 
 或者扫描二维码
-<img width="600" height="600" alt="ctool-2026-02-26-17-13-16" src="https://github.com/user-attachments/assets/22f1b4f7-3265-493c-9e5a-2b662924ed2f" />
+
+<img width="200" height="200" alt="ctool-2026-02-26-17-13-16" src="https://github.com/user-attachments/assets/22f1b4f7-3265-493c-9e5a-2b662924ed2f" />
 
 
 ## 策略组说明
