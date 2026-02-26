@@ -4,7 +4,7 @@
 
 ## 快速开始
 
-1. 复制配置文件的 Raw 链接
+1. 复制配置文件的 Raw 链接：https://raw.githubusercontent.com/LingJingMaster/Shadowrocket-Rules/refs/heads/main/Shadowrocket.conf
 2. 打开 Shadowrocket → 配置 → 右上角 `+` → 粘贴链接 → 下载
 3. 点击已下载的配置，设为使用中（✔️）
 4. 首页添加你自己的节点或订阅
