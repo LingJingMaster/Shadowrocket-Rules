@@ -22,12 +22,15 @@ IP-CIDR,24.199.123.28/32,no-resolve
 IP-CIDR,64.23.132.171/32,no-resolve
 
 # > Apple Intelligence
+DOMAIN-SUFFIX,gateway.icloud.com
 DOMAIN-SUFFIX,apps.mzstatic.com
 DOMAIN-SUFFIX,smoot.apple.com
 DOMAIN,gspe1-ssl.ls.apple.com
 DOMAIN,apple-relay.apple.com
 DOMAIN,apple-relay.cloudflare.com
 DOMAIN,apple-relay.fastly-edge.com
+DOMAIN,apple-relay.akamaized.net
+DOMAIN,apple-relay.mask.apple-dns.net
 DOMAIN,cp4.cloudflare.com
 DOMAIN,guzzoni.apple.com
 
