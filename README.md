@@ -2,6 +2,8 @@
 
 一份开箱即用的 Shadowrocket 规则配置，导入后添加自己的节点或订阅即可使用。
 
+当前版本已将 Google AI 相关规则独立并入 `Google.list`，确保 `gemini.google.com`、`bard.google.com`、`generativelanguage.googleapis.com` 等请求统一归入 `🔍 谷歌服务`。默认策略为：Google 服务走日本节点，AI 服务走美国节点，`🌍 非中国` 与 `🐟 漏网之鱼` 也默认走日本节点，便于尽量减少 Google 会话跨地区出口带来的风控问题。
+
 ## 快速开始
 
 1. 复制配置文件的 Raw 链接
@@ -21,7 +23,7 @@ https://raw.githubusercontent.com/LingJingMaster/Shadowrocket-Rules/refs/heads/m
 | 策略组 | 类型 | 说明 |
 |--------|------|------|
 | 🚀 节点选择 | 手动选择 | 主策略，可选地区分组或直连 |
-| ⚡ 自动选择 | 手动选择 | 预留，可自行改为 url-test |
+| ⚡ 自动选择 | 自动测速 | 基于 `generate_204` 自动选择延迟最低节点 |
 | 🇭🇰 香港节点 | 自动测速 | 按节点名关键词匹配香港节点 |
 | 🇹🇼 台湾节点 | 自动测速 | 按节点名关键词匹配台湾节点 |
 | 🇯🇵 日本节点 | 自动测速 | 按节点名关键词匹配日本节点 |
@@ -44,9 +46,9 @@ https://raw.githubusercontent.com/LingJingMaster/Shadowrocket-Rules/refs/heads/m
 | 8 | Ⓜ️ 微软服务 | 节点选择 |
 | 9 | 🍏 苹果服务 | 节点选择 |
 | 10 | 🔒 国内服务 | DIRECT |
-| 11 | 🌍 非中国（境外流量） | 节点选择 |
+| 11 | 🌍 非中国（境外流量） | 日本节点 |
 | 12 | GEOIP CN | DIRECT |
-| 13 | 🐟 漏网之鱼（兜底） | 节点选择 |
+| 13 | 🐟 漏网之鱼（兜底） | 日本节点 |
 
 ## 规则集来源
 
@@ -64,7 +66,7 @@ https://raw.githubusercontent.com/LingJingMaster/Shadowrocket-Rules/refs/heads/m
 ## 注意事项
 
 - 地区分组通过节点名称关键词自动匹配，请确保你的节点名称包含地区标识（如 🇭🇰、HK、香港等）
-- AI 服务默认走美国节点，谷歌服务默认走日本节点，可在 App 内手动切换
+- AI 服务默认走美国节点，谷歌服务默认走日本节点；`非中国` 和 `漏网之鱼` 也默认走日本节点，可在 App 内手动切换
 - 如需 HTTPS 解密功能，请在 Shadowrocket 中生成并安装 CA 证书
 
 ## License
