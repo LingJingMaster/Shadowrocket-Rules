@@ -51,31 +51,6 @@ DOMAIN,www.bing.com
 # > GitHub Copilot
 DOMAIN-SUFFIX,githubcopilot.com
 
-# > Google
-# > > AI Studio
-DOMAIN-SUFFIX,generativeai.google
-DOMAIN-SUFFIX,makersuite.google.com
-DOMAIN,aistudio.google.com
-DOMAIN,alkalicore-pa.clients6.google.com
-DOMAIN,alkalimakersuite-pa.clients6.google.com
-# > > Antigravity
-DOMAIN,antigravity.google
-DOMAIN,antigravity-unleash.goog
-# > > DeepMind
-DOMAIN-SUFFIX,deepmind.com
-DOMAIN-SUFFIX,deepmind.google
-# > > Gemini
-DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
-DOMAIN-SUFFIX,geller-pa.googleapis.com
-DOMAIN-SUFFIX,generativelanguage.googleapis.com
-DOMAIN,ai.google.dev
-DOMAIN,bard.google.com
-DOMAIN,gemini.google.com
-# > > NotebookLM
-DOMAIN-KEYWORD,notebooklm.google
-# > > Search Labs
-DOMAIN-KEYWORD,labs.google
-
 # > Grok
 DOMAIN-SUFFIX,grok.com
 DOMAIN-SUFFIX,x.ai
