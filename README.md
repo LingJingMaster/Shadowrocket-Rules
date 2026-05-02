@@ -2,7 +2,9 @@
 
 一份开箱即用的 Shadowrocket 规则配置，导入后添加自己的节点或订阅即可使用。
 
-当前版本已将 Google AI 相关规则独立并入 `Google.list`，确保 `gemini.google.com`、`bard.google.com`、`generativelanguage.googleapis.com` 等请求统一归入 `🔍 谷歌服务`。默认策略为：Google 服务走日本节点，AI 服务走美国节点，`🌍 非中国` 与 `🐟 漏网之鱼` 也默认走日本节点，便于尽量减少 Google 会话跨地区出口带来的风控问题。
+当前版本已将 Google AI 相关规则独立并入 `Google.list`，确保 `gemini.google.com`、`bard.google.com`、`generativelanguage.googleapis.com` 等请求统一归入 `🔍 谷歌服务`。同时新增 `ApplePush.list`，将 Apple Push Notification service 相关域名优先归入 `🍎 苹果推送`，默认走代理节点，以改善 X、Telegram 等 App 在部分网络环境下无法及时收到推送的问题。
+
+默认策略为：Google 服务走日本节点，AI 服务走美国节点，Apple 推送走节点选择，普通 Apple 服务仍默认直连，`🌍 非中国` 与 `🐟 漏网之鱼` 也默认走日本节点，便于尽量减少 Google 会话跨地区出口带来的风控问题。
 
 ## 快速开始
 
@@ -44,11 +46,12 @@ https://raw.githubusercontent.com/LingJingMaster/Shadowrocket-Rules/refs/heads/m
 | 6 | 📲 电报消息 | 节点选择 |
 | 7 | 🐱 代码托管（GitHub、GitLab、Atlassian） | 节点选择 |
 | 8 | Ⓜ️ 微软服务 | 节点选择 |
-| 9 | 🍏 苹果服务 | 节点选择 |
-| 10 | 🔒 国内服务 | DIRECT |
-| 11 | 🌍 非中国（境外流量） | 日本节点 |
-| 12 | GEOIP CN | DIRECT |
-| 13 | 🐟 漏网之鱼（兜底） | 日本节点 |
+| 9 | 🍎 苹果推送 | 节点选择 |
+| 10 | 🍏 苹果服务 | DIRECT |
+| 11 | 🔒 国内服务 | DIRECT |
+| 12 | 🌍 非中国（境外流量） | 日本节点 |
+| 13 | GEOIP CN | DIRECT |
+| 14 | 🐟 漏网之鱼（兜底） | 日本节点 |
 
 ## 规则集来源
 
@@ -60,6 +63,7 @@ https://raw.githubusercontent.com/LingJingMaster/Shadowrocket-Rules/refs/heads/m
 - DNS：DoH（DNSPod + AliDNS）+ 传统 DNS 双备份
 - DNS 劫持：拦截 8.8.8.8 / 8.8.4.4 防止硬编码 DNS 绕过规则
 - QUIC 屏蔽：对代理连接屏蔽 UDP/443，强制回退 HTTP/2
+- Apple 推送：`push.apple.com`、`gateway.push.apple.com`、`api.push.apple.com`、`sandbox.push.apple.com` 默认走代理
 - Google 防跳转：`google.cn` / `g.cn` 自动 302 到 `google.com`
 - MITM：仅解密 `*.google.cn`
 
