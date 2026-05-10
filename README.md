@@ -9,6 +9,9 @@
 - 新增 `ApplePush.list`
    - 将 Apple Push Notification service 相关域名优先归入 `🍎 苹果推送`
    - 改善 X、Telegram 等 App 在部分网络环境下无法及时收到推送的问题。
+- 本仓库维护 `Apple.list`
+   - 基于 blackmatrix7 的 Apple 规则
+   - 补充 iCloud Photos、CloudKit、Apple CDN 相关域名，优化 iCloud 照片同步。
 
 ## 默认策略
 
@@ -70,6 +73,7 @@
 
 - [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) — 主要规则集
 - [iab0x00/ProxyRules](https://github.com/iab0x00/ProxyRules) — AI 服务补充规则
+- `Apple.list` 基于 blackmatrix7 Apple 规则，并补充 iCloud Photos / Apple CDN 直连域名
 
 ## 其他特性
 
