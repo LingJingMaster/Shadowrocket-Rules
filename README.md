@@ -4,6 +4,15 @@
 
 ## 当前重点
 
+- 优化 DNS 防泄露
+   - 上游 DNS 仅使用 DNSPod / AliDNS 的 DoH
+   - 备用 DNS 不再回退系统 DNS
+   - 直连域名解析不再强制使用系统 DNS
+   - 扩展常见硬编码 DNS 劫持范围
+   - 新增 blackmatrix7 `BlockHttpDNS`，拦截 App 内置 HTTPDNS
+- 新增 `HK_Broker.list`
+   - 补充富途 / moomoo / 长桥券商域名
+   - 合并老虎证券域名，不再依赖外部券商规则
 - Google AI 相关规则已并入 `Google.list`
 - `🔍 谷歌服务` 默认走日本节点，同时提供香港节点作为手动可选分区，便于在不同网络环境下切换。
 - 新增 `ApplePush.list`
@@ -17,10 +26,12 @@
 
 | 服务 | 默认策略 | 可选策略 |
 |------|----------|----------|
+| 🧱 DNS 防泄露 | REJECT | 节点选择、DIRECT |
 | 🔍 谷歌服务 | 🇯🇵 日本节点 | 🇭🇰 香港节点、节点选择、PROXY、DIRECT |
 | 🤖 AI 服务 | 🇺🇸 美国节点 | 节点选择、PROXY、DIRECT |
 | 🍎 苹果推送 | 🚀 节点选择 | PROXY、DIRECT |
 | 🍏 苹果服务 | DIRECT | 节点选择、PROXY |
+| 📈 券商服务 | DIRECT | 节点选择、PROXY |
 | 🌍 非中国 | 🇯🇵 日本节点 | 节点选择、PROXY、DIRECT |
 | 🐟 漏网之鱼 | 🇯🇵 日本节点 | 节点选择、PROXY、DIRECT |
 
@@ -54,34 +65,38 @@
 
 | 优先级 | 服务 | 默认策略 |
 |--------|------|----------|
-| 1 | 🛑 广告拦截 | REJECT |
-| 2 | 🔍 谷歌服务（含 Gemini） | 日本节点，可手动切香港节点 |
-| 3 | 🤖 AI 服务（ChatGPT、Claude 等） | 美国节点 |
-| 4 | 📹 油管视频 | 节点选择 |
-| 5 | 🏠 私有网络 / 局域网 | DIRECT |
-| 6 | 📲 电报消息 | 节点选择 |
-| 7 | 🐱 代码托管（GitHub、GitLab、Atlassian） | 节点选择 |
-| 8 | Ⓜ️ 微软服务 | 节点选择 |
-| 9 | 🍎 苹果推送 | 节点选择 |
-| 10 | 🍏 苹果服务 | DIRECT |
-| 11 | 🔒 国内服务 | DIRECT |
-| 12 | 🌍 非中国（境外流量） | 日本节点 |
-| 13 | GEOIP CN | DIRECT |
-| 14 | 🐟 漏网之鱼（兜底） | 日本节点 |
+| 1 | 🧱 DNS 防泄露（HTTPDNS） | REJECT |
+| 2 | 🛑 广告拦截 | REJECT |
+| 3 | 🔍 谷歌服务（含 Gemini） | 日本节点，可手动切香港节点 |
+| 4 | 🤖 AI 服务（ChatGPT、Claude 等） | 美国节点 |
+| 5 | 📹 油管视频 | 节点选择 |
+| 6 | 🏠 私有网络 / 局域网 | DIRECT |
+| 7 | 📲 电报消息 | 节点选择 |
+| 8 | 🐱 代码托管（GitHub、GitLab、Atlassian） | 节点选择 |
+| 9 | Ⓜ️ 微软服务 | 节点选择 |
+| 10 | 📈 券商服务（富途 / moomoo / 长桥 / 老虎） | DIRECT |
+| 11 | 🍎 苹果推送 | 节点选择 |
+| 12 | 🍏 苹果服务 | DIRECT |
+| 13 | 🔒 国内服务 | DIRECT |
+| 14 | 🌍 非中国（境外流量） | 日本节点 |
+| 15 | GEOIP CN | DIRECT |
+| 16 | 🐟 漏网之鱼（兜底） | 日本节点 |
 
 ## 规则集来源
 
 - [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) — 主要规则集
 - [iab0x00/ProxyRules](https://github.com/iab0x00/ProxyRules) — AI 服务补充规则
 - `Apple.list` 基于 blackmatrix7 Apple 规则，并补充 iCloud Photos / Apple CDN 直连域名
+- `HK_Broker.list` 补充富途 / moomoo / 长桥 / 老虎证券域名
 
 ## 其他特性
 
-- DNS：DoH（DNSPod + AliDNS）+ 传统 DNS 双备份
-- DNS 劫持：拦截 8.8.8.8 / 8.8.4.4 防止硬编码 DNS 绕过规则
+- DNS：DoH（DNSPod + AliDNS），备用 DNS 仍使用 DoH，不回退系统 DNS
+- DNS 劫持：拦截常见硬编码 53 端口 DNS，防止应用绕过规则
+- HTTPDNS 拦截：引用 blackmatrix7 `BlockHttpDNS`，阻止 App 通过内置 HTTPDNS 绕过系统解析
 - QUIC 屏蔽：对代理连接屏蔽 UDP/443，强制回退 HTTP/2
 - 本地服务保护：`localhost.weixin.qq.com` 固定解析到 `127.0.0.1` 并强制直连，避免 fake-IP 影响微信本地回调
-- TUN 直连优化：iCloud Photos / CloudKit / Apple CDN 域名使用系统 DNS 并跳过代理，保留 Apple Push 走代理
+- TUN 直连优化：iCloud Photos / CloudKit / Apple CDN 域名使用 AliDNS DoH 并跳过代理，保留 Apple Push 走代理
 - Apple 推送：默认走代理
    - `push.apple.com`
    - `gateway.push.apple.com`

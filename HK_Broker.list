@@ -1,0 +1,135 @@
+# NAME: HK_Broker
+# DESC: HK/US broker services for Futu, Moomoo, Longbridge, and Tiger Brokers
+
+# Futu - core domains
+DOMAIN-SUFFIX,futu.link
+DOMAIN-SUFFIX,futu.com
+DOMAIN-SUFFIX,futu.cn
+DOMAIN-SUFFIX,futunn.com
+
+# Futu - numbered and backup domains
+DOMAIN-SUFFIX,futu0.com
+DOMAIN-SUFFIX,futu1.com
+DOMAIN-SUFFIX,futu2.com
+DOMAIN-SUFFIX,futu3.com
+DOMAIN-SUFFIX,futu4.com
+DOMAIN-SUFFIX,futu5.com
+DOMAIN-SUFFIX,futu6.com
+DOMAIN-SUFFIX,futu7.com
+DOMAIN-SUFFIX,futu8.com
+DOMAIN-SUFFIX,futu9.com
+
+# Futu - regional, business, trading, and static assets
+DOMAIN-SUFFIX,futuau.com
+DOMAIN-SUFFIX,futuesop.com
+DOMAIN-SUFFIX,futufin.com
+DOMAIN-SUFFIX,futuhk.com
+DOMAIN-SUFFIX,futuhk2.com
+DOMAIN-SUFFIX,futuhkapp.com
+DOMAIN-SUFFIX,futuhn.com
+DOMAIN-SUFFIX,futuholdings.com
+DOMAIN-SUFFIX,futuinc.com
+DOMAIN-SUFFIX,futuniuniu.com
+DOMAIN-SUFFIX,futubull.cn
+DOMAIN-SUFFIX,futuchain.com
+DOMAIN-SUFFIX,futustatic.com
+DOMAIN-SUFFIX,fututrade.com
+DOMAIN-SUFFIX,fututrustee.com
+DOMAIN-SUFFIX,cdn.futustatic.com
+
+# Moomoo - app and account services
+DOMAIN-SUFFIX,moomoo.com
+DOMAIN-SUFFIX,api.moomoobull.com
+DOMAIN-SUFFIX,moomooequity.com
+DOMAIN-SUFFIX,moomootrustee.com
+
+# Futu / Moomoo - attribution and push related endpoints
+DOMAIN-SUFFIX,9oju31.launches.appsflyersdk.com
+DOMAIN-SUFFIX,sgqt0j.launches.appsflyersdk.com
+
+# Futu / Moomoo - Tencent IM long connection
+DOMAIN-SUFFIX,shortconn.im.qcloud.com
+
+# Futu / Moomoo - CIDR ranges, mostly trading, quotes, and app backend endpoints
+IP-CIDR,1.14.242.0/23,no-resolve
+IP-CIDR,14.152.91.0/24,no-resolve
+IP-CIDR,38.65.217.0/24,no-resolve
+IP-CIDR,42.193.128.0/24,no-resolve
+IP-CIDR,43.130.30.0/24,no-resolve
+IP-CIDR,43.130.170.0/24,no-resolve
+IP-CIDR,43.132.107.0/24,no-resolve
+IP-CIDR,43.135.64.0/24,no-resolve
+IP-CIDR,43.135.82.0/24,no-resolve
+IP-CIDR,43.142.232.0/24,no-resolve
+IP-CIDR,43.145.30.0/24,no-resolve
+IP-CIDR,43.153.191.0/24,no-resolve
+IP-CIDR,43.153.233.0/24,no-resolve
+IP-CIDR,43.160.156.0/24,no-resolve
+IP-CIDR,49.51.78.0/24,no-resolve
+IP-CIDR,49.234.241.0/24,no-resolve
+IP-CIDR,101.32.198.0/24,no-resolve
+IP-CIDR,106.55.66.0/23,no-resolve
+IP-CIDR,111.230.119.0/24,no-resolve
+IP-CIDR,111.230.214.0/24,no-resolve
+IP-CIDR,119.28.37.0/24,no-resolve
+IP-CIDR,119.28.141.0/24,no-resolve
+IP-CIDR,119.28.183.0/24,no-resolve
+IP-CIDR,119.29.48.0/23,no-resolve
+IP-CIDR,119.91.245.0/23,no-resolve
+IP-CIDR,119.147.110.0/24,no-resolve
+IP-CIDR,121.5.97.0/24,no-resolve
+IP-CIDR,124.156.124.0/24,no-resolve
+IP-CIDR,124.156.233.0/24,no-resolve
+IP-CIDR,124.156.234.0/24,no-resolve
+IP-CIDR,129.226.79.0/24,no-resolve
+IP-CIDR,129.226.111.0/24,no-resolve
+IP-CIDR,162.14.10.0/24,no-resolve
+IP-CIDR,170.106.48.0/23,no-resolve
+IP-CIDR,170.106.62.0/24,no-resolve
+IP-CIDR,183.60.225.0/24,no-resolve
+IP-CIDR,193.112.84.0/24,no-resolve
+IP-CIDR,193.112.234.0/24,no-resolve
+
+# Futu / Moomoo - single host endpoints
+IP-CIDR,43.134.158.106/32,no-resolve
+IP-CIDR,43.132.138.6/32,no-resolve
+IP-CIDR,119.28.201.30/32,no-resolve
+IP-CIDR,49.51.77.113/32,no-resolve
+IP-CIDR,43.153.234.107/32,no-resolve
+IP-CIDR,43.153.249.33/32,no-resolve
+IP-CIDR,43.163.17.229/32,no-resolve
+IP-CIDR,170.106.201.0/24,no-resolve
+IP-CIDR,175.178.207.0/24,no-resolve
+IP-CIDR,42.194.152.250/32,no-resolve
+IP-CIDR,43.132.106.6/32,no-resolve
+IP-CIDR,43.132.106.8/32,no-resolve
+IP-CIDR,43.132.138.67/32,no-resolve
+IP-CIDR,1.15.158.235/32,no-resolve
+
+# Longbridge - API endpoints
+DOMAIN-SUFFIX,api.lbkrs.com
+DOMAIN-SUFFIX,api-gl.lbkrs.com
+
+# Longbridge - official domains and app services
+DOMAIN-SUFFIX,longbridge.cloud
+DOMAIN-SUFFIX,longbridge.com
+DOMAIN-SUFFIX,longbridge.global
+DOMAIN-SUFFIX,longbridge.hk
+DOMAIN-SUFFIX,longbridge.sg
+DOMAIN-SUFFIX,longbridgeapp.com
+DOMAIN-SUFFIX,longbridgehk.com
+
+# Tiger Brokers - official domains
+DOMAIN-SUFFIX,itiger.com
+DOMAIN-SUFFIX,tigerbrokers.com
+DOMAIN-SUFFIX,tigerbrokers.net
+DOMAIN-SUFFIX,tigerbrokers.nz
+DOMAIN-SUFFIX,tigerfintech.com
+
+# Tiger Brokers - community and legacy domains
+DOMAIN-SUFFIX,laohu8.com
+DOMAIN-SUFFIX,tigerbbs.cn
+DOMAIN-SUFFIX,tigerbbs.com
+DOMAIN-SUFFIX,xiaohu8.com
+DOMAIN-SUFFIX,zhijianfengyi.cn
+DOMAIN-SUFFIX,zhijianfengyi.com
