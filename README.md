@@ -31,7 +31,7 @@
 | 🤖 AI 服务 | 🇺🇸 美国节点 | 节点选择、PROXY、DIRECT |
 | 🍎 苹果推送 | 🚀 节点选择 | PROXY、DIRECT |
 | 🍏 苹果服务 | DIRECT | 节点选择、PROXY |
-| 📈 券商服务 | DIRECT | 节点选择、PROXY |
+| 📈 券商服务 | 🇭🇰 香港节点 | DIRECT、节点选择、PROXY |
 | 🌍 非中国 | 🇯🇵 日本节点 | 节点选择、PROXY、DIRECT |
 | 🐟 漏网之鱼 | 🇯🇵 日本节点 | 节点选择、PROXY、DIRECT |
 
@@ -74,7 +74,7 @@
 | 7 | 📲 电报消息 | 节点选择 |
 | 8 | 🐱 代码托管（GitHub、GitLab、Atlassian） | 节点选择 |
 | 9 | Ⓜ️ 微软服务 | 节点选择 |
-| 10 | 📈 券商服务（富途 / moomoo / 长桥 / 老虎） | DIRECT |
+| 10 | 📈 券商服务（富途 / moomoo / 长桥 / 老虎） | 香港节点 |
 | 11 | 🍎 苹果推送 | 节点选择 |
 | 12 | 🍏 苹果服务 | DIRECT |
 | 13 | 🔒 国内服务 | DIRECT |
