@@ -13,6 +13,7 @@
 - 新增 `HK_Broker.list`
    - 补充富途 / moomoo / 长桥券商域名
    - 合并老虎证券域名，不再依赖外部券商规则
+   - 核心券商域名已内联到主配置，避免远程规则缓存失效时被 GEOIP 误判为直连
 - Google AI 相关规则已并入 `Google.list`
 - `🔍 谷歌服务` 默认走日本节点，同时提供香港节点作为手动可选分区，便于在不同网络环境下切换。
 - 新增 `ApplePush.list`
@@ -87,7 +88,7 @@
 - [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) — 主要规则集
 - [iab0x00/ProxyRules](https://github.com/iab0x00/ProxyRules) — AI 服务补充规则
 - `Apple.list` 基于 blackmatrix7 Apple 规则，并补充 iCloud Photos / Apple CDN 直连域名
-- `HK_Broker.list` 补充富途 / moomoo / 长桥 / 老虎证券域名
+- `HK_Broker.list` 补充富途 / moomoo / 长桥 / 老虎证券域名，主配置内联核心域名兜底
 
 ## 其他特性
 
