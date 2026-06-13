@@ -13,6 +13,8 @@
 - 新增 `HK_Broker.list`
    - 补充富途 / moomoo / 长桥券商域名
    - 合并老虎证券域名，不再依赖外部券商规则
+   - 补充富途交易相关域名：`futuapi.com`、`futuin.com`、`futuhk1.com`、`futuhongkong.com`、`qtlcdn.com`
+   - 补充长桥交易相关域名：`lbkrs.com`、`longbridge.app`、`longportapp.com`
 - Google AI 相关规则已并入 `Google.list`
 - `🔍 谷歌服务` 默认走日本节点，同时提供香港节点作为手动可选分区，便于在不同网络环境下切换。
 - 新增 `ApplePush.list`

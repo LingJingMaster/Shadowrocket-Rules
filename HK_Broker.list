@@ -21,14 +21,18 @@ DOMAIN-SUFFIX,futu9.com
 
 # Futu - regional, business, trading, and static assets
 DOMAIN-SUFFIX,futuau.com
+DOMAIN-SUFFIX,futuapi.com
 DOMAIN-SUFFIX,futuesop.com
 DOMAIN-SUFFIX,futufin.com
 DOMAIN-SUFFIX,futuhk.com
+DOMAIN-SUFFIX,futuhk1.com
 DOMAIN-SUFFIX,futuhk2.com
 DOMAIN-SUFFIX,futuhkapp.com
+DOMAIN-SUFFIX,futuhongkong.com
 DOMAIN-SUFFIX,futuhn.com
 DOMAIN-SUFFIX,futuholdings.com
 DOMAIN-SUFFIX,futuinc.com
+DOMAIN-SUFFIX,futuin.com
 DOMAIN-SUFFIX,futuniuniu.com
 DOMAIN-SUFFIX,futubull.cn
 DOMAIN-SUFFIX,futuchain.com
@@ -36,6 +40,7 @@ DOMAIN-SUFFIX,futustatic.com
 DOMAIN-SUFFIX,fututrade.com
 DOMAIN-SUFFIX,fututrustee.com
 DOMAIN-SUFFIX,cdn.futustatic.com
+DOMAIN-SUFFIX,qtlcdn.com
 
 # Moomoo - app and account services
 DOMAIN-SUFFIX,moomoo.com
@@ -106,11 +111,13 @@ IP-CIDR,43.132.106.8/32,no-resolve
 IP-CIDR,43.132.138.67/32,no-resolve
 IP-CIDR,1.15.158.235/32,no-resolve
 
-# Longbridge - API endpoints
+# Longbridge - API endpoints and root domains
+DOMAIN-SUFFIX,lbkrs.com
 DOMAIN-SUFFIX,api.lbkrs.com
 DOMAIN-SUFFIX,api-gl.lbkrs.com
 
 # Longbridge - official domains and app services
+DOMAIN-SUFFIX,longbridge.app
 DOMAIN-SUFFIX,longbridge.cloud
 DOMAIN-SUFFIX,longbridge.com
 DOMAIN-SUFFIX,longbridge.global
@@ -118,6 +125,7 @@ DOMAIN-SUFFIX,longbridge.hk
 DOMAIN-SUFFIX,longbridge.sg
 DOMAIN-SUFFIX,longbridgeapp.com
 DOMAIN-SUFFIX,longbridgehk.com
+DOMAIN-SUFFIX,longportapp.com
 
 # Tiger Brokers - official domains
 DOMAIN-SUFFIX,itiger.com
