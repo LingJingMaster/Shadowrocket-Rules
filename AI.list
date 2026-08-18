@@ -30,6 +30,15 @@ DOMAIN-SUFFIX,claudeusercontent.com
 DOMAIN-SUFFIX,claudemcpclient.com
 DOMAIN-KEYWORD,claude
 DOMAIN-KEYWORD,anthropic
+DOMAIN-SUFFIX,forefront.ai
+DOMAIN-SUFFIX,auth0.com
+DOMAIN-SUFFIX,snapcraft.io
+DOMAIN-KEYWORD,datadoghq.com
+DOMAIN-SUFFIX,segment.io
+DOMAIN-SUFFIX,segment.com
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,intercom.io
+DOMAIN,storage.googleapis.com
 
 # > Microsoft Copilot
 DOMAIN,copilot.microsoft.com
