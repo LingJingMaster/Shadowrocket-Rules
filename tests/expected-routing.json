@@ -1,0 +1,22 @@
+[
+  {"name": "本地反向解析", "host": "printer.local", "policy": "PRIVATE", "resolution": "system"},
+  {"name": "广告域名", "host": "ads.example.test", "policy": "REJECT"},
+  {"name": "WebRTC STUN", "host": "stun.l.google.com", "port": 19302, "network": "udp", "policy": "REJECT"},
+  {"name": "YouTube 翻译 API", "host": "translate.googleapis.com", "policy": "YOUTUBE"},
+  {"name": "Gemini", "host": "gemini.google.com", "policy": "GOOGLE_GEMINI"},
+  {"name": "ChatGPT", "host": "chatgpt.com", "policy": "OPENAI"},
+  {"name": "Claude", "host": "claude.ai", "policy": "ANTHROPIC"},
+  {"name": "XAI", "host": "grok.com", "policy": "XAI"},
+  {"name": "Perplexity", "host": "perplexity.ai", "policy": "PERPLEXITY"},
+  {"name": "Google 静态资源", "host": "www.gstatic.com", "policy": "GOOGLE"},
+  {"name": "Telegram", "host": "telegram.org", "policy": "TELEGRAM"},
+  {"name": "代码托管", "host": "github.com", "policy": "CODE"},
+  {"name": "Microsoft", "host": "login.microsoftonline.com", "policy": "MICROSOFT"},
+  {"name": "Apple Push", "host": "api.push.apple.com", "policy": "APPLE_PUSH"},
+  {"name": "Apple 服务", "host": "www.icloud.com", "policy": "APPLE"},
+  {"name": "券商", "host": "futu.com", "policy": "BROKER"},
+  {"name": "自定义直连", "host": "gitlab.datahunter.cn", "policy": "DIRECT"},
+  {"name": "国内", "host": "example.cn", "policy": "CN"},
+  {"name": "境外", "host": "example.net", "policy": "GLOBAL"},
+  {"name": "兜底", "host": "unknown.example", "policy": "FINAL"}
+]

@@ -1,0 +1,11 @@
+# WebRTC/STUN/TURN 域名：默认拒绝，防止绕过代理建立 UDP 连接
+# 不使用 DOMAIN-KEYWORD，避免误伤 return、turnitin、stunning 等普通域名。
+DOMAIN,stun.l.google.com
+DOMAIN,stun1.l.google.com
+DOMAIN,stun2.l.google.com
+DOMAIN,stun3.l.google.com
+DOMAIN,stun4.l.google.com
+DOMAIN,global.stun.twilio.com
+DOMAIN,stun.services.mozilla.com
+DOMAIN,stun.cloudflare.com
+DOMAIN,turn.cloudflare.com

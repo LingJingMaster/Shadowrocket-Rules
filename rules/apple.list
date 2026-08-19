@@ -3,12 +3,13 @@
 # REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2026-05-10 02:20:12
 # MODIFIED: 2026-05-10
-# DOMAIN: 9
+# DOMAIN: 0
 # DOMAIN-KEYWORD: 7
-# DOMAIN-SUFFIX: 1558
-# IP-CIDR: 13
+# DOMAIN-SUFFIX: 7
+# IP-CIDR: 10
+# IP-CIDR6: 3
 # USER-AGENT: 23
-# TOTAL: 1610
+# TOTAL: 50
 
 # > iCloud Photos / CloudKit / Apple CDN (supplement)
 DOMAIN-SUFFIX,icloud.com
@@ -58,8 +59,8 @@ IP-CIDR,17.0.0.0/8,no-resolve
 IP-CIDR,192.35.50.0/24,no-resolve
 IP-CIDR,198.183.17.0/24,no-resolve
 IP-CIDR,205.180.175.0/24,no-resolve
-IP-CIDR,2403:300::/32,no-resolve
-IP-CIDR,2620:149::/32,no-resolve
-IP-CIDR,2a01:b740::/32,no-resolve
+IP-CIDR6,2403:300::/32,no-resolve
+IP-CIDR6,2620:149::/32,no-resolve
+IP-CIDR6,2a01:b740::/32,no-resolve
 IP-CIDR,63.92.224.0/19,no-resolve
 IP-CIDR,65.199.22.0/23,no-resolve

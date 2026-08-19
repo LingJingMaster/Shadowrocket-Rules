@@ -2,14 +2,15 @@
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2025-12-08 02:06:19
-# DOMAIN: 1
-# DOMAIN-KEYWORD: 5
-# DOMAIN-SUFFIX: 691
-# IP-CIDR: 5
+# DOMAIN: 9
+# DOMAIN-KEYWORD: 7
+# DOMAIN-SUFFIX: 697
+# IP-CIDR: 4
+# IP-CIDR6: 1
 # USER-AGENT: 3
-# TOTAL: 705
+# TOTAL: 721
 
-# > Google AI (from AI.list)
+# > Google AI（专属规则同时维护于 google-gemini.list）
 # > > AI Studio
 DOMAIN-SUFFIX,generativeai.google
 DOMAIN-SUFFIX,makersuite.google.com
@@ -735,5 +736,5 @@ USER-AGENT,Google.Drive*
 IP-CIDR,172.110.32.0/21,no-resolve
 IP-CIDR,173.194.0.0/16,no-resolve
 IP-CIDR,216.73.80.0/20,no-resolve
-IP-CIDR,2620:120:e000::/40,no-resolve
+IP-CIDR6,2620:120:e000::/40,no-resolve
 IP-CIDR,74.125.0.0/16,no-resolve

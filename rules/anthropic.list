@@ -1,0 +1,10 @@
+# Claude / Anthropic
+DOMAIN,servd-anthropic-website.b-cdn.net
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-KEYWORD,claude
+DOMAIN-KEYWORD,anthropic
+DOMAIN-SUFFIX,forefront.ai
