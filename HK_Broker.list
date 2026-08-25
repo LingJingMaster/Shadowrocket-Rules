@@ -172,6 +172,7 @@ DOMAIN-SUFFIX,tigerbrokers.nz
 DOMAIN-SUFFIX,tigerfintech.com
 DOMAIN-SUFFIX,skytigris.cn
 DOMAIN-SUFFIX,tradeup.com
+DOMAIN-SUFFIX,iotaskyt.com
 
 # Tiger Brokers - community and legacy domains
 DOMAIN-SUFFIX,laohu8.com
@@ -180,6 +181,7 @@ DOMAIN-SUFFIX,tigerbbs.com
 DOMAIN-SUFFIX,xiaohu8.com
 DOMAIN-SUFFIX,zhijianfengyi.cn
 DOMAIN-SUFFIX,zhijianfengyi.com
+DOMAIN-SUFFIX,skytigris.cn
 
 # Snowball X / Snowball Securities - official and OpenAPI endpoints
 DOMAIN-SUFFIX,snowball-x.com
