@@ -53,9 +53,6 @@ DOMAIN-SUFFIX,9oju31.launches.appsflyersdk.com
 DOMAIN-SUFFIX,sgqt0j.launches.appsflyersdk.com
 DOMAIN,cg.play-analytics.com
 
-# Futu / Moomoo - Tencent IM long connection
-DOMAIN-SUFFIX,shortconn.im.qcloud.com
-
 # Futu / Moomoo - exact API, quote, trading, support, and download endpoints
 DOMAIN,cdn.futustatic.com
 DOMAIN,qtcard.futunn.com
