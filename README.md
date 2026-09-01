@@ -7,6 +7,7 @@
 | 服务 | 默认策略 | 可选策略 |
 |------|----------|----------|
 | 🧱 DNS 防泄露 | REJECT | 节点选择、DIRECT |
+| 📧 邮件服务 | PROXY | DIRECT、节点选择、日本节点、香港节点 |
 | 🔍 谷歌服务 | 🇯🇵 日本节点 | 🇭🇰 香港节点、节点选择、PROXY、DIRECT |
 | 🤖 AI 服务 | 🇺🇸 美国节点 | 节点选择、PROXY、DIRECT |
 | 🍎 苹果推送 | 🚀 节点选择 | PROXY、DIRECT |
@@ -40,37 +41,40 @@
 | 🇯🇵 日本节点 | 自动测速 | 按节点名关键词匹配日本节点 |
 | 🇺🇸 美国节点 | 自动测速 | 按节点名关键词匹配美国节点 |
 | 🌐 其他节点 | 自动测速 | 匹配不属于以上地区的节点 |
+| 📧 邮件服务 | 手动选择 | 邮件协议默认使用 PROXY，可切换直连或指定地区节点 |
 
 ## 分流规则
 
-规则从上到下依次匹配。`🔍 谷歌服务` 优先级高于 `🤖 AI 服务`，因此 Gemini 会走谷歌服务策略组。
+规则从上到下依次匹配。邮件协议域名优先于 Google、Microsoft、Apple 等通用服务规则；`🔍 谷歌服务` 优先级高于 `🤖 AI 服务`，因此 Gemini 会走谷歌服务策略组。
 
 | 优先级 | 服务 | 默认策略 |
 |--------|------|----------|
 | 1 | 🧱 DNS 防泄露（HTTPDNS） | REJECT |
-| 2 | 🔍 谷歌服务（含 Gemini） | 日本节点，可手动切香港节点 |
-| 3 | 🤖 AI 服务（ChatGPT、Claude 等） | 美国节点 |
-| 4 | 📹 油管视频（含 YouTube 翻译 API） | 节点选择 |
-| 5 | 🔒 哔哩哔哩 | DIRECT |
-| 6 | 🏠 私有网络 / 局域网 | DIRECT |
-| 7 | 📲 电报消息 | 节点选择 |
-| 8 | 🐱 代码托管（GitHub、GitLab、Atlassian） | 节点选择 |
-| 9 | Ⓜ️ 微软服务 | 节点选择 |
-| 10 | 🏦 汇丰香港（含 Reward+） | 香港节点 |
-| 11 | 🏦 其他香港银行 | DIRECT |
-| 12 | 📈 券商服务（富途 / moomoo / 长桥 / 老虎 / 雪盈 / 盈透） | 香港节点 |
-| 13 | 🍎 苹果推送 | 节点选择 |
-| 14 | 🍏 苹果服务 | DIRECT |
-| 15 | 🔒 国内服务 | DIRECT |
-| 16 | 🌍 非中国（境外流量） | PROXY |
-| 17 | GEOIP CN | DIRECT |
-| 18 | 🐟 漏网之鱼（兜底） | PROXY |
+| 2 | 📧 邮件服务（IMAP / POP3 / SMTP） | PROXY，可切换 DIRECT 或地区节点 |
+| 3 | 🔍 谷歌服务（含 Gemini） | 日本节点，可手动切香港节点 |
+| 4 | 🤖 AI 服务（ChatGPT、Claude 等） | 美国节点 |
+| 5 | 📹 油管视频（含 YouTube 翻译 API） | 节点选择 |
+| 6 | 🔒 哔哩哔哩 | DIRECT |
+| 7 | 🏠 私有网络 / 局域网 | DIRECT |
+| 8 | 📲 电报消息 | 节点选择 |
+| 9 | 🐱 代码托管（GitHub、GitLab、Atlassian） | 节点选择 |
+| 10 | Ⓜ️ 微软服务 | 节点选择 |
+| 11 | 🏦 汇丰香港（含 Reward+） | 香港节点 |
+| 12 | 🏦 其他香港银行 | DIRECT |
+| 13 | 📈 券商服务（富途 / moomoo / 长桥 / 老虎 / 雪盈 / 盈透） | 香港节点 |
+| 14 | 🍎 苹果推送 | 节点选择 |
+| 15 | 🍏 苹果服务 | DIRECT |
+| 16 | 🔒 国内服务 | DIRECT |
+| 17 | 🌍 非中国（境外流量） | PROXY |
+| 18 | GEOIP CN | DIRECT |
+| 19 | 🐟 漏网之鱼（兜底） | PROXY |
 
 ## 规则集来源
 
 - [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) — 主要规则集
 - [iab0x00/ProxyRules](https://github.com/iab0x00/ProxyRules) — AI 服务补充规则
-- `Apple.list` 基于 blackmatrix7 Apple 规则，并补充 iCloud Photos / Apple CDN 直连域名
+- `Mail.list` 收录 Apple、Gmail、Outlook、Yahoo、Yandex 的邮件协议端点
+- `Apple.list` 基于 blackmatrix7 Apple 规则，并配套加载 `Apple_Domain.list`，补充 iCloud Photos / Apple CDN 直连域名
 - `HK_Broker.list` 补充富途 / moomoo / 长桥 / 老虎 / 雪盈 / 盈透 / TradeUP / Schwab 证券域名及交易 IP 段
 - `HSBC_HK.list` 与 `HK_Banks_Direct.list` 收录香港银行网站及 App 服务域名
 
@@ -82,6 +86,9 @@
    - 直连域名使用系统 DNS，改善国内服务和 CDN 调度
    - 扩展常见硬编码 DNS 劫持范围
    - 新增 blackmatrix7 `BlockHttpDNS`，拦截 App 内置 HTTPDNS
+- 新增 `Mail.list`
+   - 精确收录常见 IMAP、POP3 与 SMTP 服务端点
+   - 默认使用 PROXY，可手动切换 DIRECT 或地区节点
 - 新增 `HK_Broker.list`
    - 补充富途 / moomoo / 长桥券商域名
    - 合并老虎证券域名，不再依赖外部券商规则
@@ -101,6 +108,7 @@
    - 改善 X、Telegram 等 App 在部分网络环境下无法及时收到推送的问题。
 - 本仓库维护 `Apple.list`
    - 基于 blackmatrix7 的 Apple 规则
+   - 配套加载 `Apple_Domain.list`，补齐完整 Apple 域名集
    - 补充 iCloud Photos、CloudKit、Apple CDN 相关域名，优化 iCloud 照片同步。
 
 ## 其他特性
@@ -108,11 +116,11 @@
 - DNS：代理域名使用经代理转发的 Cloudflare / Google DoH，直连域名使用系统 DNS
 - DNS 劫持：拦截常见硬编码 53 端口 DNS，防止应用绕过规则
 - HTTPDNS 拦截：引用 blackmatrix7 `BlockHttpDNS`，阻止 App 通过内置 HTTPDNS 绕过系统解析
+- 邮件分流：常见邮件协议端点默认使用 PROXY，可按网络情况切换直连或地区节点
 - QUIC 屏蔽：对代理连接屏蔽 UDP/443，强制回退 HTTP/2
 - 本地服务保护：`localhost.weixin.qq.com` 固定解析到 `127.0.0.1` 并强制直连，避免 fake-IP 影响微信本地回调
-- 腾讯云 IM：`shortconn.im.qcloud.com` 前置归入国内服务，避免被券商分流规则误挂到香港节点
 - TUN 直连优化：iCloud Photos / CloudKit / Apple CDN 域名使用系统 DNS 并跳过代理，保留 Apple Push 走代理
-- Apple 分流一致性：Apple Push 域名与 TCP 5223 优先走苹果推送；其余 `apple.com` 服务归入苹果服务，避免因解析 IP 不同而在直连与代理间漂移
+- Apple 分流一致性：Apple Push 域名与 TCP 5223 优先走苹果推送；`Apple.list` 与 `Apple_Domain.list` 共同覆盖其余 Apple 服务，避免因解析 IP 不同而在直连与代理间漂移
 - 豆包服务：`doubao.com` 明确直连，避免语音及输入法接口因解析 IP 不同而改变出口
 - DNS 上游：Cloudflare DoH 为主、Google DoH 为备用，均通过代理连接；代理解析不回退系统 DNS
 - 局域网解析保护：`*.in-addr.arpa`、`*.ip6.arpa`、`*.local` 前置直连并交给系统解析，补充常见 DNS-SD 反查模式，避免 Bonjour / PTR 反查打到公共 DoH
