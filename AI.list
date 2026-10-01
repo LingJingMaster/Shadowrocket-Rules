@@ -1,3 +1,12 @@
+# > Apple Intelligence / Siri / Search
+# Source: https://support.apple.com/101555
+DOMAIN,guzzoni.apple.com
+DOMAIN-SUFFIX,smoot.apple.com
+DOMAIN,apple-relay.cloudflare.com
+DOMAIN,apple-relay.fastly-edge.com
+DOMAIN,cp4.cloudflare.com
+DOMAIN,apple-relay.apple.com
+
 # > ChatGPT
 DOMAIN-SUFFIX,chat.com
 DOMAIN-SUFFIX,chatgpt.com
