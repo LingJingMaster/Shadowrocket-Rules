@@ -31,6 +31,20 @@
 
 <img width="200" height="200" alt="ctool-2026-02-26-17-13-16" src="https://github.com/user-attachments/assets/22f1b4f7-3265-493c-9e5a-2b662924ed2f" />
 
+## 在 Android 上使用
+
+Shadowrocket 仅支持 Apple 设备。Android 用户可以使用免费的 Rocket Proxy（也支持 iPhone / iPad / Mac / Apple TV）导入本配置，规则和策略组无需修改：
+
+1. 安装 Rocket Proxy：[Google Play](https://play.google.com/store/apps/details?id=uk.co.jcltravels.rocketproxy) · [App Store](https://apps.apple.com/app/id6785291194)
+2. 用手机相机扫描下方二维码，确认导入（iPhone 上也可以把下面的链接粘贴到 Safari 打开）：
+   `rocketproxy://config/add/https%3A%2F%2Fraw.githubusercontent.com%2FLingJingMaster%2FShadowrocket-Rules%2Frefs%2Fheads%2Fmain%2FShadowrocket.conf`
+3. 如果 App 里已有其他配置在使用，请把本配置设为使用中
+4. 添加你自己的节点或订阅后连接
+
+<img width="200" height="200" alt="Rocket Proxy 导入二维码" src="images/rocketproxy-qr.png" />
+
+注意：`[Host]` 中的 `server:system` 条目暂不生效；Android 版暂不支持 `[URL Rewrite]` 和 `[MITM]`（只影响 google.cn 跳转）。
+
 ## 分流规则
 
 | 优先级 | 服务 | 默认策略 |
