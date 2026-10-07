@@ -100,8 +100,10 @@
 ## 其他特性
 
 - DNS：代理域名使用经代理转发的 Cloudflare / Google DoH，直连域名使用系统 DNS
+- IPv6：默认关闭 IPv6 与 IPv6 优先解析，避免节点缺少 IPv6 出口时国内 App 等待超时后才回退 IPv4
 - DNS 劫持：拦截常见硬编码 53 端口 DNS，防止应用绕过规则
-- HTTPDNS 拦截：引用 blackmatrix7 `BlockHttpDNS`，阻止 App 通过内置 HTTPDNS 绕过系统解析；微信 HTTPDNS 前置直连，避免影响朋友圈和公众号图片的 CDN 调度
+- HTTPDNS 拦截：引用 blackmatrix7 `BlockHttpDNS`，阻止 App 通过内置 HTTPDNS 绕过系统解析；微信域名与腾讯 HTTPDNS `119.29.29.98/31` 前置直连，避免影响朋友圈和公众号图片的 CDN 调度
+- 微信 TUN 兼容：`qpic.cn`、`qlogo.cn`、`multimedia.nt.qq.com.cn` 前置直连并返回真实 IP，减少 Fake-IP、内置解析和海外 CDN 误调度造成的图片转圈
 - 邮件分流：常见邮件协议端点默认使用 PROXY，可按网络情况切换直连或地区节点
 - QUIC 屏蔽：对代理连接屏蔽 UDP/443，强制回退 HTTP/2
 - 本地服务保护：`localhost.weixin.qq.com` 固定解析到 `127.0.0.1` 并强制直连，避免 fake-IP 影响微信本地回调
