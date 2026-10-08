@@ -1,4 +1,4 @@
-# Shadowrocket 配置文件
+# Shadowrocket Config
 
 一份开箱即用的 Shadowrocket 规则配置，导入后添加自己的节点或订阅即可使用。
 
