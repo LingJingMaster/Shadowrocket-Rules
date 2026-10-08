@@ -64,6 +64,16 @@
 - `HK_Broker.list` 补充富途 / moomoo / 长桥 / 老虎 / 雪盈 / 盈透 / TradeUP / Schwab 证券域名及交易 IP 段
 - `HSBC_HK.list` 与 `HK_Banks_Direct.list` 收录香港银行网站及 App 服务域名
 
+## Star History
+
+<a href="https://www.star-history.com/?repos=lingjingmaster%2Fshadowrocket-rules&type=date&logscale=&legend=bottom-right">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=lingjingmaster/shadowrocket-rules&type=date&theme=dark&logscale&legend=bottom-right" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=lingjingmaster/shadowrocket-rules&type=date&logscale&legend=bottom-right" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=lingjingmaster/shadowrocket-rules&type=date&logscale&legend=bottom-right" />
+ </picture>
+</a>
+
 ## License
 
 MIT
