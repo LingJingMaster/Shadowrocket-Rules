@@ -1,22 +1,9 @@
 # Shadowrocket Config
 
-一份开箱即用的 Shadowrocket 规则配置，导入后添加自己的节点或订阅即可使用。
-
-## 默认策略
-
-| 服务 | 默认策略 | 可选策略 |
-|------|----------|----------|
-| 🧱 DNS 防泄露 | REJECT | 节点选择、DIRECT |
-| 📧 邮件服务 | PROXY | DIRECT、节点选择、日本节点、香港节点 |
-| 🔍 谷歌服务 | 🇯🇵 日本节点 | 🇭🇰 香港节点、节点选择、PROXY、DIRECT |
-| 🤖 AI 服务 | 🇺🇸 美国节点 | 节点选择、PROXY、DIRECT |
-| 🍎 苹果推送 | 🚀 节点选择 | PROXY、DIRECT |
-| 🍏 苹果服务 | DIRECT | 节点选择、PROXY |
-| 🏦 汇丰香港 | DIRECT | 🇭🇰 香港节点、节点选择、PROXY |
-| 🏦 香港银行 | DIRECT | 香港节点、节点选择、PROXY |
-| 📈 券商服务 | 🇭🇰 香港节点 | DIRECT、节点选择、PROXY |
-| 🌍 非中国 | PROXY | 节点选择、DIRECT、日本节点 |
-| 🐟 漏网之鱼 | PROXY | 节点选择、DIRECT、日本节点 |
+一份开箱即用的 Shadowrocket 规则配置
+- 支持前沿的苹果智能（Apple Intelligence）
+- 在新规下的香港券商访问
+- 导入后添加自己的节点或订阅即可使用
 
 ## 快速开始
 
@@ -54,6 +41,29 @@
 | 17 | 🌍 非中国（境外流量） | PROXY |
 | 18 | GEOIP CN | DIRECT |
 | 19 | 🐟 漏网之鱼（兜底） | PROXY |
+
+
+## 默认策略
+
+| 服务 | 默认策略 | 可选策略 |
+|------|----------|----------|
+| 🧱 DNS 防泄露 | REJECT | 节点选择、DIRECT |
+| 📧 邮件服务 | PROXY | DIRECT、节点选择、日本节点、香港节点 |
+| 🔍 谷歌服务 | 🇯🇵 日本节点 | 🇭🇰 香港节点、节点选择、PROXY、DIRECT |
+| 🤖 AI 服务 | 🇺🇸 美国节点 | 节点选择、PROXY、DIRECT |
+| 🍎 苹果推送 | 🚀 节点选择 | PROXY、DIRECT |
+| 🍏 苹果服务 | DIRECT | 节点选择、PROXY |
+| 🏦 汇丰香港 | DIRECT | 🇭🇰 香港节点、节点选择、PROXY |
+| 🏦 香港银行 | DIRECT | 香港节点、节点选择、PROXY |
+| 📈 券商服务 | 🇭🇰 香港节点 | DIRECT、节点选择、PROXY |
+| 🌍 非中国 | PROXY | 节点选择、DIRECT、日本节点 |
+| 🐟 漏网之鱼 | PROXY | 节点选择、DIRECT、日本节点 |
+
+
+
+
+
+
 
 ## 规则集来源
 
