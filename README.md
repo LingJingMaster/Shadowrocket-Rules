@@ -1,4 +1,4 @@
-# 小火箭Shadowrocket Config
+# 小火箭 Shadowrocket Config
 
 一份开箱即用的 小火箭 Shadowrocket 规则配置
 - 支持前沿的苹果智能（Apple Intelligence）
