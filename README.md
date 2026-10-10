@@ -1,6 +1,6 @@
-# Shadowrocket Config
+# 小火箭Shadowrocket Config
 
-一份开箱即用的 Shadowrocket 规则配置
+一份开箱即用的 小火箭 Shadowrocket 规则配置
 - 支持前沿的苹果智能（Apple Intelligence）
 - 在新规下的香港券商访问
 - 导入后添加自己的节点或订阅即可使用
