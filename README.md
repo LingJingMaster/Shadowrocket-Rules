@@ -1,3 +1,7 @@
+> 如需Clash版本 → [请点击此处](https://github.com/LingJingMaster/Clash-Rules)
+
+---
+
 # 小火箭 Shadowrocket Config
 
 一份开箱即用的 小火箭 Shadowrocket 规则配置
