@@ -54,9 +54,6 @@ DOMAIN,www.bing.com
 # > GitHub Copilot
 DOMAIN-SUFFIX,githubcopilot.com
 
-# > Grok
-DOMAIN-SUFFIX,grok.com
-DOMAIN-SUFFIX,x.ai
 
 # > OpenRouter
 DOMAIN-SUFFIX,openrouter.ai
