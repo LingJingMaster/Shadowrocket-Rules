@@ -46,6 +46,7 @@ DOMAIN-SUFFIX,claudeusercontent.com
 DOMAIN-SUFFIX,claudemcpclient.com
 DOMAIN-KEYWORD,claude
 DOMAIN-KEYWORD,anthropic
+DOMAIN,http-intake.logs.us5.datadoghq.com
 
 # > Microsoft Copilot
 DOMAIN,copilot.microsoft.com
